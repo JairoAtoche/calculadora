@@ -4,6 +4,7 @@ import Boton from '../src/componentes/Boton';
 import BotonLimpiar from '../src/componentes/BotonLimpiar';
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
+import Swal from 'sweetalert2'
 
 function App() {  
   const [valor, setValor] = useState('');
@@ -22,11 +23,19 @@ function App() {
         setValor(evaluate(valor) );    
       }else {
         setValor('');
-        alert('Por favor, ingresa un valor correcto.');
+        Swal.fire({
+          title: 'Error',
+          text: 'Por favor, ingresa un valor correcto.',
+          icon: 'error'
+        })
       }
     } catch(error) {
       setValor('');
-      alert('Por favor, ingresa un valor correcto.');
+      Swal.fire({
+        title: 'Error',
+        text: 'Por favor, ingresa un valor correcto.',
+        icon: 'error'
+      })
     }
   };
   return (
