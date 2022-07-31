@@ -1,0 +1,30 @@
+.boton {
+    height: 70px;
+    display: flex;
+    flex: 1 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    background-color: #1b1b32;
+    color: white;
+    border-radius: 25px;
+    border: 2px solid white;
+    margin: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.5s all ease;
+}
+.boton--operador {
+    background-color:rgb(37, 86, 176);
+}
+.boton--operador:hover {
+    background-color:rgb(16, 48, 108);
+}
+.boton--numero {
+    background-color: antiquewhite;
+    color: #1b1b32;
+}
+.boton--numero:hover {
+    background-color: navajowhite;
+}
